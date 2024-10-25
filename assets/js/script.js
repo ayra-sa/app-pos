@@ -1,49 +1,74 @@
 function loadHTML(selector, url) {
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector(selector).innerHTML = data;
-        });
+  fetch(url)
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector(selector).innerHTML = data;
+    });
 }
 
 // Load header and footer
-loadHTML('#header-container', 'components/header.html');
-loadHTML('#footer-container', 'components/footer.html');
+loadHTML("#header-container", "components/header.html");
+loadHTML("#footer-container", "components/footer.html");
+loadHTML("#whatsapp-button", "components/whatsapp-button.html");
 
 window.onscroll = function () {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-        navbar.classList.remove('transparent');
-    } else {
-        navbar.classList.remove('scrolled');
-        navbar.classList.add('transparent');
-    }
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+    navbar.classList.remove("transparent");
+  } else {
+    navbar.classList.remove("scrolled");
+    navbar.classList.add("transparent");
+  }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-    const selectSelected = document.querySelector(".select-selected");
-    const selectItems = document.querySelector(".select-items");
+function setActiveMenu() {
+  const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll(".nav-link");
 
-    // Toggle dropdown
-    selectSelected.addEventListener("click", function() {
-        selectItems.classList.toggle("select-hide");
-    });
+  navLinks.forEach((link) => {
+    if (link.getAttribute("data-link") === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+}
 
-    // Handle item selection
-    selectItems.querySelectorAll("div").forEach(item => {
-        item.addEventListener("click", function() {
-            selectSelected.textContent = this.textContent;
-            selectItems.classList.add("select-hide");
-        });
-    });
+loadHTML("#header-container", "components/header.html", setActiveMenu);
 
-    // Close dropdown if clicked outside
-    document.addEventListener("click", function(e) {
-        if (!selectSelected.contains(e.target)) {
-            selectItems.classList.add("select-hide");
-        }
+function loadHTML(selector, url, callback) {
+  fetch(url)
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector(selector).innerHTML = data;
+      if (callback) callback();
     });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selectSelected = document.querySelector(".select-selected");
+  const selectItems = document.querySelector(".select-items");
+
+  // Toggle dropdown
+  selectSelected.addEventListener("click", function () {
+    selectItems.classList.toggle("select-hide");
+  });
+
+  // Handle item selection
+  selectItems.querySelectorAll("div").forEach((item) => {
+    item.addEventListener("click", function () {
+      selectSelected.textContent = this.textContent;
+      selectItems.classList.add("select-hide");
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener("click", function (e) {
+    if (!selectSelected.contains(e.target)) {
+      selectItems.classList.add("select-hide");
+    }
+  });
 });
 
 // Ambil elemen video, deskripsi, thumbnail, dan button play
@@ -86,3 +111,22 @@ videoItems.forEach((item) => {
     videoPlayerContainer.style.display = "none";
   });
 });
+
+// Move focus to the next field automatically
+document.querySelectorAll(".otp-input").forEach((input, index, arr) => {
+  input.addEventListener("input", (e) => {
+    if (input.value.length === 1 && index < arr.length - 1) {
+      arr[index + 1].focus();
+    } else if (input.value.length === 0 && index > 0) {
+      arr[index - 1].focus();
+    }
+  });
+});
+
+function hideLoader() {
+  // Wait 2 seconds to simulate loading time
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }, 2000);
+}

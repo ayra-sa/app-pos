@@ -2,6 +2,7 @@
 
 :root {
   --gradient-blue: linear-gradient(to bottom, #2175ec, #2ea9dc);
+  --gradient-blue-reverse: linear-gradient(to top, #2175ec, #2ea9dc);
   --gradient-green: linear-gradient(to bottom, #29AE4F, #36E266);
   --gradient-purple: linear-gradient(to bottom, #7B15E0, #7B15E0);
   --gradient-white: linear-gradient(to bottom, #ffffff, #c0c0c0);
@@ -51,6 +52,10 @@ a {
 
 .btn-primary-gradient {
   background: var(--gradient-blue);
+  color: white;
+}
+.btn-primary-gradient:hover {
+  /* background: var(--gradient-blue-reverse); */
   color: white;
 }
 
@@ -168,6 +173,7 @@ option {
 .hero-section {
   height: 100vh;
   color: white;
+  overflow-x: hidden;
 }
 
 .hero-overlay {
@@ -655,6 +661,10 @@ video {
 /* Register */
 #register, #login {
   overflow: hidden;
+  height: 100vh;
+}
+#register .register-wrap, #login .login-wrap {
+  height: 100vh;
 }
 #register .register-img img, #login .login-img img {
   position: absolute;
@@ -916,9 +926,21 @@ video {
 }
 
 @media (min-width: 992px) {
+  .carousel-control-prev {
+    left: -3rem;
+  }
+  .carousel-control-next {
+    right: -3rem;
+  }
 }
 
 @media (min-width: 1200px) {
+  .carousel-control-prev {
+    left: 0;
+  }
+  .carousel-control-next {
+    right: 0;
+  }
 }
 
 @media (min-width: 1400px) {

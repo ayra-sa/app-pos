@@ -3,8 +3,8 @@
 :root {
   --gradient-blue: linear-gradient(to bottom, #2175ec, #2ea9dc);
   --gradient-blue-reverse: linear-gradient(to top, #2175ec, #2ea9dc);
-  --gradient-green: linear-gradient(to bottom, #29AE4F, #36E266);
-  --gradient-purple: linear-gradient(to bottom, #7B15E0, #7B15E0);
+  --gradient-green: linear-gradient(to bottom, #29ae4f, #36e266);
+  --gradient-purple: linear-gradient(to bottom, #7b15e0, #7b15e0);
   --gradient-white: linear-gradient(to bottom, #ffffff, #c0c0c0);
   --radius: 13px;
 }
@@ -59,7 +59,8 @@ a {
   color: white;
 }
 
-.btn-primary-gradient, .btn-primary {
+.btn-primary-gradient,
+.btn-primary {
   border: none;
 }
 
@@ -85,6 +86,15 @@ a {
 
 .w-full {
   width: 100%;
+}
+
+.text-red {
+  color: #F61F1F;
+}
+
+.px-custom {
+  padding-right: .8rem !important;
+  padding-left: .8rem !important;
 }
 
 /* lang */
@@ -206,7 +216,8 @@ option {
 .hero-section .carousel-inner {
   height: 100vh;
 }
-.hero-section .carousel-item img, .hero-section img {
+.hero-section .carousel-item img,
+.hero-section img {
   object-fit: cover;
   position: absolute;
   z-index: -2;
@@ -449,6 +460,8 @@ footer {
   justify-content: center;
   margin-bottom: 1.75rem;
   margin-inline: auto;
+  height: 250px !important;
+  object-fit: fill;
 }
 /* Hardware */
 
@@ -475,32 +488,32 @@ footer {
   margin-top: auto;
 }
 .harga-card.basic {
-  border-color: #2170EF;
+  border-color: #2170ef;
 }
 .harga-card.advance {
-  border-color: #29A54C;
+  border-color: #29a54c;
 }
 .harga-card.pro {
-  border-color: #1542E0;
+  border-color: #1542e0;
 }
 .harga-card.enterprise {
-  border-color: #7B15E0;
+  border-color: #7b15e0;
 }
 
 .harga-card h3 {
   font-size: 1.5rem;
 }
 .harga-card.basic h3 {
-  color: #1597E0;
+  color: #1597e0;
 }
 .harga-card.advance h3 {
-  color: #29A54C;
+  color: #29a54c;
 }
 .harga-card.pro h3 {
-  color: #1542E0;
+  color: #1542e0;
 }
 .harga-card.enterprise h3 {
-  color: #7B15E0;
+  color: #7b15e0;
 }
 
 .harga-card .harga {
@@ -516,7 +529,7 @@ footer {
   margin-top: 1.5rem;
 }
 .harga-card .best {
-  background-color: #CFB41D;
+  background-color: #cfb41d;
   border-radius: 8px;
   padding: 12px 20px;
   color: white;
@@ -524,7 +537,8 @@ footer {
   font-size: 1.25rem;
 }
 
-.harga-card .harga p, .harga-card .harga b {
+.harga-card .harga p,
+.harga-card .harga b {
   margin-bottom: 0;
   color: white;
 }
@@ -532,7 +546,7 @@ footer {
   font-size: 1.5rem;
 }
 .harga-card .harga p {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .harga-card.basic .harga {
@@ -570,16 +584,16 @@ footer {
   font-size: 2rem;
 }
 .harga-card.basic ul li::before {
-  color: #2EA9DB;
+  color: #2ea9db;
 }
 .harga-card.advance ul li::before {
-  color: #1CCE4E;
+  color: #1cce4e;
 }
 .harga-card.pro ul li::before {
-  color: #1542E0;
+  color: #1542e0;
 }
 .harga-card.enterprise ul li::before {
-  color: #1542E0;
+  color: #1542e0;
 }
 
 .harga-card.advance .btn {
@@ -620,7 +634,8 @@ footer {
 video {
   display: none;
 }
-#playButton, #play {
+#playButton,
+#play {
   cursor: pointer;
 }
 .truncate-multiline {
@@ -639,9 +654,9 @@ video {
 }
 
 #faq .accordion-item {
-  border: 1px solid #C0C0C0;
-  border-radius: var(--radius); 
-  margin-bottom: 1rem; 
+  border: 1px solid #c0c0c0;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
 }
 #faq .accordion-button {
   border-radius: var(--radius);
@@ -659,20 +674,24 @@ video {
 /* FAQ */
 
 /* Register */
-#register, #login {
+#register,
+#login {
   overflow: hidden;
   height: 100vh;
 }
-#register .register-wrap, #login .login-wrap {
+#register .register-wrap,
+#login .login-wrap {
   height: 100vh;
 }
-#register .register-img img, #login .login-img img {
+#register .register-img img,
+#login .login-img img {
   position: absolute;
   inset: 0;
   z-index: -1;
   height: 100%;
 }
-#register .register-img, #login .login-img {
+#register .register-img,
+#login .login-img {
   display: flex;
   place-content: center;
   align-items: center;
@@ -680,34 +699,41 @@ video {
   color: white;
   /* text-align: center; */
 }
-#register .register-img h2, #login .login-img h2 {
+#register .register-img h2,
+#login .login-img h2 {
   font-size: 3.375rem;
   line-height: 80px;
 }
 #register .register-wrap {
   /* height: 100vh; */
 }
-#register .form-wrap, #login .form-wrap {
+#register .form-wrap,
+#login .form-wrap {
   padding-inline: 3rem;
 }
-#register .form-check input, #login .form-check input {
+#register .form-check input,
+#login .form-check input {
   padding: 10px;
 }
-#register .form-check label, #register #sendOtp {
+#register .form-check label,
+#register #sendOtp {
   font-size: 0.813rem;
 }
 #register #sendOtp {
   border-radius: var(--radius);
   background: linear-gradient(to right, #2175ec, #2ea9dc);
 }
-#register .form-select, #register .form-control, #login .form-control {
+#register .form-select,
+#register .form-control,
+#login .form-control {
   font-size: 0.75rem;
 }
-#register .btn-daftar, #login .btn-masuk {
+#register .btn-daftar,
+#login .btn-masuk {
   background: linear-gradient(to right, #2175ec, #2ea9dc);
   width: 100%;
   margin-top: 2rem;
-  padding: .85rem;
+  padding: 0.85rem;
   border-radius: var(--radius);
 }
 .otp-input {
@@ -716,7 +742,7 @@ video {
   text-align: center;
   font-size: 1.5rem;
   margin: 0 5px;
-  border: 1px solid #1542E0;
+  border: 1px solid #1542e0;
   border-radius: var(--radius);
 }
 .otp-input-group {
@@ -729,12 +755,11 @@ video {
 /* Register Informasi */
 .sidebar {
   background: var(--gradient-blue);
-  height: 100vh;
   padding: 2rem 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 350px;
+  position: static;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 .sidebar img {
   margin-inline: auto;
@@ -747,20 +772,21 @@ video {
   text-align: center;
 }
 .sidebar .nav-item .nav-link {
-  color: #C0C0C0;
+  color: #c0c0c0;
 }
 .sidebar .nav-item .nav-link.active {
   color: white;
 }
 .content {
-  margin-left: 370px;
-  padding: 4rem 1rem;
+  margin-left: 0px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
 }
 .custom-file-upload {
   display: inline-block;
   cursor: pointer;
-  color: #C0C0C0;
-  border: 1px solid #C0C0C0;
+  color: #c0c0c0;
+  border: 1px solid #c0c0c0;
   padding: 10px;
   border-radius: var(--radius);
   text-align: center;
@@ -782,22 +808,39 @@ video {
   width: 20px;
   height: 20px;
 }
+.password-wrap {
+  position: relative;
+  /* max-width: 300px; */
+}
+.password-wrap input, .password-wrap input {
+  padding-right: 30px;
+}
+.password-wrap .toggle-password, .password-wrap .toggle-confirmPassword {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  /* transform: translateY(-50%); */
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #6c757d;
+}
 /* Register Informasi */
 
 /* Syarat, Kebijakan */
-#syarat, #kebijakan {
+#syarat,
+#kebijakan {
   padding-top: 3rem;
   padding-bottom: 15rem;
 }
-#syarat .box, #kebijakan .box {
+#syarat .box,
+#kebijakan .box {
   margin-top: 2rem;
-  border: 1px solid #C0C0C0;
+  border: 1px solid #c0c0c0;
   border-radius: var(--radius);
   padding: 1.5rem;
   height: 500px;
 }
 /* Syarat, Kebijakan */
-
 
 @media (min-width: 576px) {
   .navbar-nav a {
@@ -844,7 +887,8 @@ video {
     height: 100%;
     width: 100%;
   }
-  #register .register-img, #login .login-img {
+  #register .register-img,
+  #login .login-img {
     padding: 1rem 6rem;
   }
 }
@@ -864,53 +908,53 @@ video {
 
   .fitur-wrap {
     display: grid;
-  
+
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  
+
     gap: 0px;
   }
-  
+
   #item-0 {
     grid-row-start: 1;
     grid-column-start: 1;
-  
+
     grid-row-end: 2;
     grid-column-end: 2;
   }
   #item-1 {
     grid-row-start: 2;
     grid-column-start: 1;
-  
+
     grid-row-end: 3;
     grid-column-end: 2;
   }
   #item-2 {
     grid-row-start: 3;
     grid-column-start: 2;
-  
+
     grid-row-end: 4;
     grid-column-end: 5;
   }
   #item-3 {
     grid-row-start: 2;
     grid-column-start: 5;
-  
+
     grid-row-end: 3;
     grid-column-end: 6;
   }
-  
+
   #item-4 {
     grid-row-start: 1;
     grid-column-start: 5;
-  
+
     grid-row-end: 2;
     grid-column-end: 6;
   }
   #item-5 {
     grid-row-start: 1;
     grid-column-start: 2;
-  
+
     grid-row-end: 3;
     grid-column-end: 5;
   }
@@ -922,7 +966,17 @@ video {
   .perangkat-card img {
     width: 100%;
   }
-  
+  .sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+  }
+  .content {
+    margin-left: 370px;
+    padding: 4rem 3rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -944,7 +998,8 @@ video {
 }
 
 @media (min-width: 1400px) {
-  #register .register-img, #login .login-img {
+  #register .register-img,
+  #login .login-img {
     padding: 3rem 10rem;
   }
 }

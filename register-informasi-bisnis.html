@@ -20,19 +20,19 @@
     <div class="container-fluid">
       <div class="row">
         <!-- Sidebar -->
-        <div class="col-2 sidebar">
+        <div class="col-md-2 sidebar">
           <div class="d-flex justify-content-center">
             <img src="assets/images/logo-sidebar.png" alt="logo" />
           </div>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" href="register-informasi-bisnis.html"
-                >Register Informasi Bisnis</a
+              <a class="nav-link" href="register-informasi-akun.html"
+              >Register Informasi Akun</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="register-informasi-akun.html"
-                >Register Informasi Akun</a
+              <a class="nav-link active" href="register-informasi-bisnis.html"
+                >Register Informasi Bisnis</a
               >
             </li>
             <li class="nav-item">
@@ -44,7 +44,7 @@
         </div>
 
         <!-- Content -->
-        <div class="col content">
+        <div class="col-md-10 content">
           <div class="text-center">
             <h2 class="section-title">Informasi Bisnis</h2>
             <p class="section-text">
@@ -53,22 +53,23 @@
           </div>
 
           <form class="mt-5 d-flex flex-column gap-4">
-            <!-- Input Upload Image -->
-            <div>
-              <label class="form-label">Logo</label>
-              <label class="custom-file-upload">
-                <img src="assets/images/icons/upload.svg" alt="icon" />
-                Upload atau Letakan berkas disini
-                <input type="file" accept="image/*" required />
-              </label>
+            <div class="row">
+              <div class="col">
+                <label class="form-label">Logo<span class="text-red">*</span></label>
+                <label class="custom-file-upload">
+                  <img src="assets/images/icons/upload.svg" alt="icon" />
+                  Upload atau Letakan berkas disini
+                  <input type="file" accept="image/*" required />
+                </label>
+              </div>
             </div>
 
             <div class="row g-4">
               <div class="col-md-4">
-                <label for="usaha" class="form-label">Jenis Usaha</label>
-                <select class="form-select p-3" id="usaha" required>
+                <label for="bisnis" class="form-label">Jenis Bisnis<span class="text-red">*</span></label>
+                <select class="form-select p-3" id="bisnis" required>
                   <option value="" selected disabled>
-                    Pilih Jenis Usaha Anda
+                    Pilih Jenis Bisis Anda
                   </option>
                   <option value="starter">Usaha 1</option>
                   <option value="business">Usaha 2</option>
@@ -76,17 +77,17 @@
               </div>
 
               <div class="col-md-4">
-                <label for="nama" class="form-label">Nama</label>
+                <label for="nama" class="form-label">Nama Bisnis Anda<span class="text-red">*</span></label>
                 <input
                   type="text"
                   class="form-control p-3"
                   id="nama"
-                  placeholder="Contoh : Toko Resto"
+                  placeholder="Contoh: Labba Resto"
                   required
                 />
               </div>
               <div class="col-md-4">
-                <label for="phone" class="form-label">No Telp</label>
+                <label for="phone" class="form-label">Nomor Telepon Bisnis Anda<span class="text-red">*</span></label>
                 <input
                   type="tel"
                   class="form-control p-3"
@@ -98,35 +99,46 @@
             </div>
 
             <div class="row g-4">
+              <div class="col-md-8">
+                <label for="alamat" class="form-label">Alamat Usaha<span class="text-red">*</span></label>
+                <input
+                  type="text"
+                  name="alamat"
+                  id="alamat"
+                  placeholder="Contoh : Jl. Mekar Raya No. 33 RT. 006 RW. 023"
+                  class="form-control p-3"
+                  required
+                />
+              </div>
               <div class="col-md-4">
-                <label for="provinsi" class="form-label">Provinsi</label>
+                <label for="provinsi" class="form-label">Provinsi<span class="text-red">*</span></label>
                 <select class="form-select p-3" id="provinsi" required>
                   <option value="" selected disabled>Pilih Provinsi</option>
                   <option value="starter">Provinsi 1</option>
                   <option value="business">Provinsi 2</option>
                 </select>
               </div>
-              <div class="col-md-4">
-                <label for="kabkota" class="form-label">Kab/Kota</label>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-3">
+                <label for="kabkota" class="form-label">Kab/Kota<span class="text-red">*</span></label>
                 <select class="form-select p-3" id="kabkota" required>
                   <option value="" selected disabled>Pilih Kab/Kota</option>
                   <option value="starter">Kabupaten 1</option>
                   <option value="business">Kota 2</option>
                 </select>
               </div>
-              <div class="col-md-4">
-                <label for="kecamatan" class="form-label">Kecamatan</label>
+              <div class="col-md-3">
+                <label for="kecamatan" class="form-label">Kecamatan<span class="text-red">*</span></label>
                 <select class="form-select p-3" id="kecamatan" required>
                   <option value="" selected disabled>Pilih Kecamatan</option>
                   <option value="starter">Kecamatan 1</option>
                   <option value="business">Kecamatan 2</option>
                 </select>
               </div>
-            </div>
-
-            <div class="row g-4">
-              <div class="col-md-4">
-                <label for="keldesa" class="form-label">Kelurahan/Desa</label>
+              <div class="col-md-3">
+                <label for="keldesa" class="form-label">Kelurahan/Desa<span class="text-red">*</span></label>
                 <select class="form-select p-3" id="keldesa" required>
                   <option value="" selected disabled>
                     Pilih Kelurahan/Desa
@@ -136,14 +148,13 @@
                 </select>
               </div>
 
-              <div class="col-md-8">
-                <label for="alamat" class="form-label">Alamat Usaha</label>
+              <div class="col-md-3">
+                <label for="kode" class="form-label">Kode Pos<span class="text-red">*</span></label>
                 <input
                   type="text"
-                  name="alamat"
-                  id="alamat"
-                  placeholder="Contoh : Jl. Mekar Raya No. 33 RT. 006 RW. 023"
                   class="form-control p-3"
+                  id="kode"
+                  placeholder="Kode Pos"
                   required
                 />
               </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Register Informasi Bisnis</title>
+    <title>Register Informasi Akun</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -11,6 +11,12 @@
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
     />
 
     <!-- Custom CSS -->
@@ -26,13 +32,13 @@
           </div>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="register-informasi-bisnis.html"
-                >Register Informasi Bisnis</a
+              <a class="nav-link active" href="register-informasi-akun.html"
+                >Register Informasi Akun</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="register-informasi-akun.html"
-                >Register Informasi Akun</a
+              <a class="nav-link" href="register-informasi-bisnis.html"
+                >Register Informasi Bisnis</a
               >
             </li>
             <li class="nav-item">
@@ -46,39 +52,51 @@
         <!-- Content -->
         <div class="col content">
           <div class="text-center">
-            <h2 class="section-title">Informasi Bisnis</h2>
+            <h2 class="section-title">Lengkapi Data Akun</h2>
             <p class="section-text">
-              Anda dapat merubahnya kembali dimenu pengaturan bisnis
+              Anda dapat merubahnya kembali dimenu pengaturan akun pengguna
             </p>
           </div>
 
           <form class="mt-5 d-flex flex-column gap-4">
             <div class="row g-4">
               <div class="col-md-4">
-                <label for="nama" class="form-label">Nama Pemilik</label>
+                <label for="nama" class="form-label"
+                  >Nama<span class="text-red">*</span></label
+                >
                 <input
                   type="text"
                   name="nama"
                   id="nama"
-                  placeholder="Nama Pemilik"
+                  placeholder="Silahkan masukkan nama lengkap anda"
                   class="form-control p-3"
                   required
                 />
               </div>
               <div class="col-md-4">
-                <label for="email" class="form-label">Email</label>
+                <div class="d-flex align-items-center mb-2">
+                  <label for="email" class="form-label mb-0"
+                    >Alamat Email<span class="text-red">*</span></label
+                  >
+                  <a href="#" class="ms-4">Konfirmasi Email</a>
+                </div>
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Email"
+                  placeholder="Contoh: nama@gmail.com"
                   class="form-control p-3"
                   required
                 />
               </div>
 
               <div class="col-md-4">
-                <label for="phone" class="form-label">No Telp</label>
+                <div class="d-flex align-items-center mb-2">
+                  <label for="phone" class="form-label"
+                    >Nomor Telepon<span class="text-red">*</span></label
+                  >
+                  <a href="#" class="ms-4">Konfirmasi Nomor Telepon</a>
+                </div>
                 <input
                   type="tel"
                   class="form-control p-3"
@@ -90,46 +108,10 @@
             </div>
 
             <div class="row g-4">
-              <div class="col-md-4">
-                <label for="provinsi" class="form-label">Provinsi</label>
-                <select class="form-select p-3" id="provinsi" required>
-                  <option value="" selected disabled>Pilih Provinsi</option>
-                  <option value="starter">Provinsi 1</option>
-                  <option value="business">Provinsi 2</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="kabkota" class="form-label">Kab/Kota</label>
-                <select class="form-select p-3" id="kabkota" required>
-                  <option value="" selected disabled>Pilih Kab/Kota</option>
-                  <option value="starter">Kabupaten 1</option>
-                  <option value="business">Kota 2</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <label for="kecamatan" class="form-label">Kecamatan</label>
-                <select class="form-select p-3" id="kecamatan" required>
-                  <option value="" selected disabled>Pilih Kecamatan</option>
-                  <option value="starter">Kecamatan 1</option>
-                  <option value="business">Kecamatan 2</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="row g-4">
-              <div class="col-md-4">
-                <label for="keldesa" class="form-label">Kelurahan/Desa</label>
-                <select class="form-select p-3" id="keldesa" required>
-                  <option value="" selected disabled>
-                    Pilih Kelurahan/Desa
-                  </option>
-                  <option value="starter">Kelurahan 1</option>
-                  <option value="business">Desa 2</option>
-                </select>
-              </div>
-
               <div class="col-md-8">
-                <label for="alamat" class="form-label">Alamat Usaha</label>
+                <label for="alamat" class="form-label"
+                  >Alamat Usaha<span class="text-red">*</span></label
+                >
                 <input
                   type="text"
                   name="alamat"
@@ -139,11 +121,71 @@
                   required
                 />
               </div>
+              <div class="col-md-4">
+                <label for="provinsi" class="form-label"
+                  >Provinsi<span class="text-red">*</span></label
+                >
+                <select class="form-select p-3" id="provinsi" required>
+                  <option value="" selected disabled>Pilih Provinsi</option>
+                  <option value="starter">Provinsi 1</option>
+                  <option value="business">Provinsi 2</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-3">
+                <label for="kabkota" class="form-label"
+                  >Kab/Kota<span class="text-red">*</span></label
+                >
+                <select class="form-select p-3" id="kabkota" required>
+                  <option value="" selected disabled>Pilih Kab/Kota</option>
+                  <option value="starter">Kabupaten 1</option>
+                  <option value="business">Kota 2</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="kecamatan" class="form-label"
+                  >Kecamatan<span class="text-red">*</span></label
+                >
+                <select class="form-select p-3" id="kecamatan" required>
+                  <option value="" selected disabled>Pilih Kecamatan</option>
+                  <option value="starter">Kecamatan 1</option>
+                  <option value="business">Kecamatan 2</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="keldesa" class="form-label"
+                  >Kelurahan/Desa<span class="text-red">*</span></label
+                >
+                <select class="form-select p-3" id="keldesa" required>
+                  <option value="" selected disabled>
+                    Pilih Kelurahan/Desa
+                  </option>
+                  <option value="starter">Kelurahan 1</option>
+                  <option value="business">Desa 2</option>
+                </select>
+              </div>
+
+              <div class="col-md-3">
+                <label for="kode" class="form-label"
+                  >Kode Pos<span class="text-red">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control p-3"
+                  id="kode"
+                  placeholder="Kode Pos"
+                  required
+                />
+              </div>
             </div>
 
             <div class="row g-4">
               <div class="col-md-4">
-                <label for="noktp" class="form-label">Nomor KTP</label>
+                <label for="noktp" class="form-label"
+                  >Nomor KTP<span class="text-red">*</span></label
+                >
                 <input
                   type="number"
                   name="noktp"
@@ -173,14 +215,15 @@
                   id="nonpwp"
                   placeholder="Contoh : 147xxx xxx xxxx"
                   class="form-control p-3"
-                  required
                 />
               </div>
             </div>
 
             <div class="row g-4">
               <div class="col-md-4">
-                <label class="form-label">Unggah KTP</label>
+                <label class="form-label"
+                  >Unggah KTP<span class="text-red">*</span></label
+                >
                 <label class="custom-file-upload">
                   <img src="assets/images/icons/upload.svg" alt="icon" />
                   Upload atau Letakan berkas disini
@@ -202,6 +245,49 @@
                   Upload atau Letakan berkas disini
                   <input type="file" accept="image/*" />
                 </label>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-4">
+                <label for="hak" class="form-label"
+                  >Hak Akses<span class="text-red">*</span></label
+                >
+                <input
+                  type="text"
+                  name="hak"
+                  id="hak"
+                  placeholder="Hak akses"
+                  class="form-control p-3"
+                  required
+                  disabled
+                />
+              </div>
+
+              <div class="col-md-4 password-wrap">
+                <label for="password" class="form-label"
+                  >Buat Kata Sandi<span class="text-red">*</span></label
+                >
+                <input
+                  type="password"
+                  class="form-control p-3"
+                  id="password"
+                  placeholder="Kata sandi minimal 8 karakter"
+                />
+                <i class="bi bi-eye toggle-password position-absolute" onclick="togglePassword()" style="top: 50%; right: 30px; cursor: pointer;"></i>
+              </div>
+              
+              <div class="col-md-4 password-wrap">
+                <label for="confirmPassword" class="form-label"
+                  >Konfirmasi Kata Sandi<span class="text-red">*</span></label
+                >
+                <input
+                  type="password"
+                  class="form-control p-3"
+                  id="confirmPassword"
+                  placeholder="Konfirmasi kata sandi anda"
+                />
+                <i class="bi bi-eye toggle-confirmPassword position-absolute" onclick="toggleConfirmPassword()" style="top: 50%; right: 30px; cursor: pointer;"></i>
               </div>
             </div>
 

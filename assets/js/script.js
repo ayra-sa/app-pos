@@ -130,3 +130,29 @@ function hideLoader() {
     document.getElementById("content").style.display = "block";
   }, 2000);
 }
+
+function togglePassword() {
+  const passwordInput = document.getElementById("password");
+  const toggleIcon = document.querySelector(".toggle-password");
+  
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleIcon.classList.replace("bi-eye", "bi-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    toggleIcon.classList.replace("bi-eye-slash", "bi-eye");
+  }
+}
+
+function toggleConfirmPassword() {
+  const passwordInput = document.getElementById("confirmPassword");
+  const toggleIcon = document.querySelector(".toggle-confirmPassword");
+  
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleIcon.classList.replace("bi-eye", "bi-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    toggleIcon.classList.replace("bi-eye-slash", "bi-eye");
+  }
+}

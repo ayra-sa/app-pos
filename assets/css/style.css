@@ -113,7 +113,7 @@ select {
   background-repeat: no-repeat;
   background-position: right 10px center;
   cursor: pointer;
-  width: 70px;
+  width: 60px;
 }
 option {
   background-color: transparent;
@@ -303,7 +303,7 @@ footer {
 }
 .footer-content {
   padding-top: 15rem;
-  padding-bottom: 1rem;
+  padding-bottom: 5rem;
   color: white;
 }
 .footer-content a span,
@@ -450,17 +450,20 @@ footer {
   padding-top: 3rem;
   padding-bottom: 17rem;
 }
-.perangkat-card img {
+.perangkat-card .perangkat-card-img {
   background: linear-gradient(to bottom, #ffffff, #c0c0c0);
   border: 1px solid rgb(192, 192, 192, 0.5);
   border-radius: 13px;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.75rem;
+  height: 270px;
+}
+.perangkat-card img {
   margin-inline: auto;
-  height: 250px !important;
+  height: 100%;
   object-fit: fill;
 }
 /* Hardware */
@@ -608,6 +611,11 @@ footer {
 #someFitur {
   padding-top: 3.5rem;
   padding-bottom: 17rem;
+}
+
+.somefitur-card img {
+  width: 70px;
+  height: 70px;
 }
 /* Harga */
 
@@ -827,13 +835,12 @@ video {
 /* Register Informasi */
 
 /* Syarat, Kebijakan */
-#syarat,
-#kebijakan {
+.section-single {
   padding-top: 3rem;
   padding-bottom: 15rem;
 }
-#syarat .box,
-#kebijakan .box {
+.section-single .box,
+.section-single .box {
   margin-top: 2rem;
   border: 1px solid #c0c0c0;
   border-radius: var(--radius);

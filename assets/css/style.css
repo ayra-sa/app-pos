@@ -109,6 +109,7 @@ a {
   color: #1542e0;
   font-weight: 700;
   font-size: 1.5rem;
+  margin-top: 25rem;
 }
 
 /* lang */
@@ -914,13 +915,13 @@ video {
   .login {
     color: white;
   }
-  .hero-title {
+  /* .hero-title {
     font-size: 4rem;
   }
 
   .hero-subtitle {
     font-size: 1.5rem;
-  }
+  } */
 
   .partners-wrap {
     display: grid;
@@ -957,15 +958,15 @@ video {
 
 @media (min-width: 768px) {
   .hero-content {
-    width: 80%;
+    width: 70%;
   }
 
   .hero-title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .fitur-wrap {

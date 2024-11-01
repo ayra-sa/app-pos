@@ -11,6 +11,7 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  /* outline: 2px solid red; */
 }
 
 h1,
@@ -109,7 +110,28 @@ a {
   color: #1542e0;
   font-weight: 700;
   font-size: 1.5rem;
-  margin-top: 25rem;
+  /* margin-top: 35rem; */
+}
+
+.carousel-indicators button {
+  border-radius: 8px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #1542e0;
+  width: 20px;
+  height: 8px;
+  border-top: none;
+  border-bottom: none;
+}
+
+.carousel-indicators .active {
+  width: 30px;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  top: auto;
+  bottom: 8rem;
 }
 
 /* lang */
@@ -171,7 +193,10 @@ option {
 
 /* Navbar */
 .navbar {
-  width: 100%;
+  /* width: 100%; */
+  top: 0;
+  right: 0;
+  left: 0;
   /* transition: background-color 0.4s ease; */
 }
 .nav-wrap {
@@ -188,25 +213,38 @@ option {
   font-weight: 500;
 }
 .navbar-nav .nav-link.active {
-  color: white;
-  /* text-decoration: underline; */
+  color: black;
   font-weight: bold;
 }
 .navbar-nav .nav-link.active::after {
   content: "";
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: black;
   display: block;
 }
 .login {
   color: black;
 }
+.navbar-toggler {
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.offcanvas.offcanvas-end {
+  padding-top: 2rem;
+}
 /* Navbar */
 .hero-section {
   height: 100vh;
   color: white;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .hero-overlay {
@@ -250,6 +288,9 @@ option {
 }
 
 /* Section 1 */
+.section-1 {
+  overflow-x: hidden;
+}
 .section-1 img {
   width: 100%;
 }
@@ -297,6 +338,7 @@ option {
 .partners-wrap img {
   margin-inline: auto;
   height: auto;
+  width: 100%;
   /* width: 100%;
   object-fit: contain; */
 }
@@ -307,6 +349,9 @@ footer {
   background: linear-gradient(to top, #1f6eee, #2ea9db);
   position: relative;
 }
+footer .row {
+  margin-right: 0;
+}
 #float {
   position: absolute;
   top: -200px;
@@ -314,10 +359,10 @@ footer {
 }
 .floating {
   border-radius: 44px;
-  padding: 2.5rem 3rem;
+  padding: 2rem;
 }
 .floating p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: white;
   font-weight: 600;
 }
@@ -335,6 +380,17 @@ footer {
 }
 .footer-content .contact p {
   margin-bottom: 0;
+}
+.social-wrap {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+.social-wrap img {
+  width: 100%;
+  /* width: 50px; */
+  height: auto;
 }
 /* Footer */
 
@@ -472,6 +528,7 @@ footer {
 #perangkat {
   padding-top: 3rem;
   padding-bottom: 17rem;
+  overflow-x: hidden;
 }
 .perangkat-card .perangkat-card-img {
   background: linear-gradient(to bottom, #ffffff, #c0c0c0);
@@ -636,10 +693,17 @@ footer {
   padding-bottom: 17rem;
 }
 
+.somefitur-wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
 .somefitur-card img {
   width: 70px;
   height: 70px;
 }
+
 /* Harga */
 
 /* Panduan */
@@ -912,6 +976,9 @@ video {
   .nav-wrap .dropdown-item {
     color: black;
   }
+  .offcanvas.offcanvas-end {
+    padding-top: 0;
+  }
   .login {
     color: white;
   }
@@ -928,8 +995,12 @@ video {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .partners-wrap img {
+    width: auto;
+  }
+
   .floating p {
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 
   #float {
@@ -941,7 +1012,6 @@ video {
   }
 
   .somefitur-wrap {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row: 2;
   }
@@ -957,6 +1027,16 @@ video {
 }
 
 @media (min-width: 768px) {
+  .navbar-nav .nav-link.active {
+    color: white;
+  }
+  .navbar-nav .nav-link.active::after {
+    background-color: white;
+  }
+  /* .btn-navigate {
+    margin-top: 25rem;
+  } */
+
   .hero-content {
     width: 70%;
   }
@@ -976,6 +1056,10 @@ video {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
     gap: 0px;
+  }
+
+  .floating p {
+    font-size: 2rem;
   }
 
   #item-0 {
@@ -1039,6 +1123,12 @@ video {
   .content {
     margin-left: 370px;
     padding: 4rem 3rem;
+  }
+
+  .social-wrap img {
+    /* width: 100%; */
+    /* width: 50px; */
+    height: 50px;
   }
 }
 

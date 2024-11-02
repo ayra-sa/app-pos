@@ -189,6 +189,10 @@ option {
   align-items: center;
   z-index: 9999;
 }
+
+#loader img {
+  width: 50%;
+}
 /* Loader */
 
 /* Navbar */
@@ -323,24 +327,6 @@ option {
 /* Section 4 */
 #partners {
   padding-bottom: 15rem;
-}
-.partners-wrap {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-  align-items: center;
-  /* grid-row: 3; */
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 4rem;
-}
-.partners-wrap img {
-  margin-inline: auto;
-  height: auto;
-  width: 100%;
-  /* width: 100%;
-  object-fit: contain; */
 }
 /* Section 4 */
 
@@ -970,6 +956,9 @@ video {
 /* Syarat, Kebijakan */
 
 @media (min-width: 576px) {
+  #loader img {
+    width: auto;
+  }
   .navbar-nav a {
     color: white;
   }
@@ -989,15 +978,6 @@ video {
   .hero-subtitle {
     font-size: 1.5rem;
   } */
-
-  .partners-wrap {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .partners-wrap img {
-    width: auto;
-  }
 
   .floating p {
     font-size: 1.25rem;

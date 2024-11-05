@@ -15,10 +15,10 @@ window.onscroll = function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) {
     navbar.classList.add("scrolled");
-    navbar.classList.remove("transparent");
+    navbar.classList.remove("bg-transparent");
   } else {
     navbar.classList.remove("scrolled");
-    navbar.classList.add("transparent");
+    navbar.classList.add("bg-transparent");
   }
 };
 

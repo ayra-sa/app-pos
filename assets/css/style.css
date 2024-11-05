@@ -9,9 +9,71 @@
   --radius: 13px;
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 * {
   font-family: "Poppins", sans-serif;
-  /* outline: 2px solid red; */
 }
 
 h1,
@@ -90,12 +152,12 @@ a {
 }
 
 .text-red {
-  color: #F61F1F;
+  color: #f61f1f;
 }
 
 .px-custom {
-  padding-right: .8rem !important;
-  padding-left: .8rem !important;
+  padding-right: 0.8rem !important;
+  padding-left: 0.8rem !important;
 }
 
 .btn-navigate {
@@ -129,7 +191,8 @@ a {
   width: 30px;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
   top: auto;
   bottom: 8rem;
 }
@@ -201,7 +264,14 @@ option {
   top: 0;
   right: 0;
   left: 0;
+  padding-bottom: 0;
   /* transition: background-color 0.4s ease; */
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .nav-wrap {
   width: 100%;
@@ -227,6 +297,14 @@ option {
   background-color: black;
   display: block;
 }
+.navbar-nav .nav-link.show {
+  color: white;
+  font-weight: 700;
+}
+.navbar-nav .nav-link:focus {
+  color: white;
+}
+
 .login {
   color: black;
 }
@@ -893,10 +971,12 @@ video {
   position: relative;
   /* max-width: 300px; */
 }
-.password-wrap input, .password-wrap input {
+.password-wrap input,
+.password-wrap input {
   padding-right: 30px;
 }
-.password-wrap .toggle-password, .password-wrap .toggle-confirmPassword {
+.password-wrap .toggle-password,
+.password-wrap .toggle-confirmPassword {
   position: absolute;
   top: 50%;
   right: 30px;
@@ -928,7 +1008,8 @@ video {
   box-shadow: none;
 }
 
-#paymentAccordion .accordion-collapse.show, #paymentAccordion .accordion-collapse {
+#paymentAccordion .accordion-collapse.show,
+#paymentAccordion .accordion-collapse {
   background-color: #c0c0c0;
 }
 
@@ -1008,6 +1089,14 @@ video {
 
 @media (min-width: 768px) {
   .navbar-nav .nav-link.active {
+    color: white;
+  }
+  .navbar-nav .nav-link:hover {
+    font-weight: 700;
+    color: white;
+  }
+  .navbar-nav .nav-link:visited {
+    font-weight: 700;
     color: white;
   }
   .navbar-nav .nav-link.active::after {

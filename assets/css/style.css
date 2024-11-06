@@ -321,6 +321,11 @@ option {
 
 .offcanvas.offcanvas-end {
   padding-top: 2rem;
+  height: 100vh;
+}
+.offcanvas-body {
+  overflow-y: unset;
+  background: white;
 }
 /* Navbar */
 .hero-section {
@@ -1046,8 +1051,12 @@ video {
   .nav-wrap .dropdown-item {
     color: black;
   }
+  .offcanvas-body {
+    background: transparent;
+  }
   .offcanvas.offcanvas-end {
     padding-top: 0;
+    height: auto;
   }
   .login {
     color: white;

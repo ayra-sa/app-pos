@@ -165,11 +165,12 @@ document.getElementById("see-more-btn").addEventListener("click", function () {
   this.classList.add("d-none");
 });
 
-document.addEventListener("visibilitychange", () => {
-  const overlay = document.getElementById("anti-screenshot-overlay");
-  if (document.visibilityState === "hidden") {
-    overlay.style.visibility = "visible";
-  } else {
-    overlay.style.visibility = "hidden";
+document.addEventListener('keydown', (e) => {
+  const overlay = document.getElementById('anti-screenshot-overlay');
+  if ((e.key === 'PrintScreen') || (e.ctrlKey && e.key === 's')) {
+    overlay.style.display = 'flex';
+    setTimeout(() => {
+      overlay.style.display = 'none';
+    }, 2000);
   }
 });

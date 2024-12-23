@@ -165,12 +165,20 @@ document.getElementById("see-more-btn").addEventListener("click", function () {
   this.classList.add("d-none");
 });
 
-// document.addEventListener('keydown', (e) => {
-//   const overlay = document.getElementById('anti-screenshot-overlay');
-//   if ((e.key === 'PrintScreen') || (e.ctrlKey && e.key === 's')) {
-//     overlay.style.display = 'flex';
-//     setTimeout(() => {
-//       overlay.style.display = 'none';
-//     }, 2000);
-//   }
-// });
+const overlay = document.getElementById('anti-screenshot-overlay');
+
+// Detect multi-touch or gesture
+let touchCount = 0;
+
+document.addEventListener('touchstart', (e) => {
+  touchCount = e.touches.length;
+  if (touchCount >= 3) { // Detect 3-finger gesture
+    overlay.style.display = 'flex';
+  }
+});
+
+document.addEventListener('touchend', () => {
+  touchCount = 0;
+  overlay.style.display = 'none';
+});
+

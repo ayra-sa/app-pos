@@ -156,3 +156,11 @@ function toggleConfirmPassword() {
     toggleIcon.classList.replace("bi-eye-slash", "bi-eye");
   }
 }
+
+// see more
+document.getElementById("see-more-btn").addEventListener("click", function () {
+  document.querySelectorAll(".d-none").forEach(function (card) {
+    card.classList.remove("d-none");
+  });
+  this.classList.add("d-none")
+});

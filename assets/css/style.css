@@ -90,6 +90,14 @@
   z-index: 9999;
 }
 
+@media print {
+ 
+  html,
+  body {
+      display: none;
+  }
+}
+
 h1,
 h2,
 h3,

@@ -134,7 +134,7 @@ function hideLoader() {
 function togglePassword() {
   const passwordInput = document.getElementById("password");
   const toggleIcon = document.querySelector(".toggle-password");
-  
+
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
     toggleIcon.classList.replace("bi-eye", "bi-eye-slash");
@@ -147,7 +147,7 @@ function togglePassword() {
 function toggleConfirmPassword() {
   const passwordInput = document.getElementById("confirmPassword");
   const toggleIcon = document.querySelector(".toggle-confirmPassword");
-  
+
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
     toggleIcon.classList.replace("bi-eye", "bi-eye-slash");
@@ -162,13 +162,14 @@ document.getElementById("see-more-btn").addEventListener("click", function () {
   document.querySelectorAll(".d-none").forEach(function (card) {
     card.classList.remove("d-none");
   });
-  this.classList.add("d-none")
+  this.classList.add("d-none");
 });
 
-document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'hidden') {
-      document.body.style.backgroundColor = 'black';
+document.addEventListener("visibilitychange", () => {
+  const overlay = document.getElementById("anti-screenshot-overlay");
+  if (document.visibilityState === "hidden") {
+    overlay.style.visibility = "visible";
   } else {
-      document.body.style.backgroundColor = '';
+    overlay.style.visibility = "hidden";
   }
 });

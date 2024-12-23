@@ -164,3 +164,11 @@ document.getElementById("see-more-btn").addEventListener("click", function () {
   });
   this.classList.add("d-none")
 });
+
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') {
+      document.body.style.backgroundColor = 'black';
+  } else {
+      document.body.style.backgroundColor = '';
+  }
+});
